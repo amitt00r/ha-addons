@@ -1,0 +1,46 @@
+name: Fish TTS
+version: "1.0.0"
+slug: fish_tts
+description: Fish Audio voices over Wyoming, using the free s2.1-pro-free model
+url: https://github.com/amitt00r/ha-addons/tree/main/fish_tts
+arch:
+  - aarch64
+  - amd64
+init: true
+startup: services
+boot: auto
+discovery:
+  - wyoming
+hassio_api: true
+ports:
+  10220/tcp: null
+ports_description:
+  10220/tcp: Wyoming (only needed outside Home Assistant)
+options:
+  api_key: ""
+  model: s2.1-pro-free
+  fallback_model: ""
+  latency: balanced
+  speed: 1.0
+  sample_rate: 24000
+  languages:
+    - en
+  voices:
+    - name: gandalf
+      voice_id: d933b4f108e140868a84e4e552e2b8a2
+    - name: jack
+      voice_id: 8ffd56873da3457b960d20242867b8a8
+  debug: false
+schema:
+  api_key: password
+  model: str
+  fallback_model: str?
+  latency: list(normal|balanced)
+  speed: float(0.5,2.0)
+  sample_rate: list(16000|22050|24000|44100)
+  languages:
+    - str
+  voices:
+    - name: str
+      voice_id: match(^[0-9a-f]{32}$)
+  debug: bool
