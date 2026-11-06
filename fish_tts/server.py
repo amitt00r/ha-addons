@@ -183,8 +183,8 @@ async def main() -> None:
     attribution = Attribution(name="Fish Audio", url="https://fish.audio")
     info = Info(tts=[TtsProgram(
         name="fish-tts", description="Fish Audio voices", attribution=attribution, installed=True,
-        version="1.0.0", supports_synthesize_streaming=True,
-        voices=[TtsVoice(name=n, description=f"Fish voice {vid}", attribution=attribution,
+        version="1.0.1", supports_synthesize_streaming=True,
+        voices=[TtsVoice(name=n, description=n.replace("_", " ").title(), attribution=attribution,
                          installed=True, version=None, languages=s.languages)
                 for n, vid in s.voices.items()])])
     _LOG.info("model %s (fallback %s), voices %s", s.model, s.fallback_model or "none", list(s.voices))

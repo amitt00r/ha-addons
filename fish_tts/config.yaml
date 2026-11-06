@@ -1,5 +1,5 @@
 name: Fish TTS
-version: "1.0.0"
+version: "1.0.1"
 slug: fish_tts
 description: Fish Audio voices over Wyoming, using the free s2.1-pro-free model
 url: https://github.com/amitt00r/ha-addons/tree/main/fish_tts
