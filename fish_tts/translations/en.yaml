@@ -1,0 +1,26 @@
+configuration:
+  api_key:
+    name: API key
+    description: Fish Audio API key (fish.audio → API Keys).
+  model:
+    name: Model
+    description: "s2.1-pro-free costs nothing (fair use). Paid: s2.1-pro, s2-pro."
+  fallback_model:
+    name: Fallback model
+    description: Paid model to retry with when the free one is refused (402/429). Empty = no fallback.
+  latency:
+    name: Latency
+    description: balanced starts speaking sooner; normal is slightly better quality.
+  speed:
+    name: Speed
+    description: 0.5 to 2.0, applies to every voice.
+  sample_rate:
+    name: Sample rate
+  languages:
+    name: Languages
+    description: Languages the voices are offered for in pipelines. Fish detects the spoken language from the text.
+  voices:
+    name: Voices
+    description: Name shown in the pipeline, and the Fish voice id (the 32-character id in a fish.audio/app/m/<id> link).
+  debug:
+    name: Debug logging
