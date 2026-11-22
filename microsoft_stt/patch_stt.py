@@ -4,6 +4,7 @@ Upstream keeps the last recognised result in self._results and never clears it, 
 which Azure recognises nothing (silence, noise, a cut-off recording) returns the previous
 request's text. Each request now collects its own results; all recognised segments are joined
 (upstream kept only the last segment, dropping the start of anything said with a pause).
+Azure cancellations are logged with their reason (upstream logged them only in debug, without it).
 """
 
 import pathlib
@@ -14,6 +15,21 @@ path = pathlib.Path(mod.__file__)
 src = path.read_text()
 
 EDITS = [
+    (
+        """        self._speech_recognizer.canceled.connect(
+            lambda evt: _LOGGER.debug(f"CANCELED {evt}")
+        )
+""",
+        """        def canceled(evt):
+            details = evt.cancellation_details
+            _LOGGER.warning(
+                "Azure canceled recognition: reason=%s code=%s details=%s",
+                details.reason, details.code, details.error_details,
+            )
+
+        self._speech_recognizer.canceled.connect(canceled)
+""",
+    ),
     (
         """        def recognized(event: speechsdk.SpeechRecognitionEventArgs):
             _LOGGER.debug(f"{event.result}")

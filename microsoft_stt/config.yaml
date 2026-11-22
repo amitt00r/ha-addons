@@ -1,5 +1,5 @@
 name: Microsoft STT (fixed)
-version: "1.3.10.1"
+version: "1.3.10.2"
 slug: microsoft_stt
 description: Microsoft Azure speech to text over Wyoming, with the stale-transcript bug fixed
 url: https://github.com/amitt00r/ha-addons/tree/main/microsoft_stt
