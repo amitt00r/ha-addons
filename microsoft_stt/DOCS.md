@@ -9,7 +9,7 @@ Microsoft Azure speech to text over Wyoming. A copy of
   again. Each request now starts empty.
 - Speech with a pause in it is returned whole (upstream kept only the last segment).
 
-Other changes: the s6 service files are created in the Dockerfile; `subscription_key` is a password field;
+Other changes: Debian bookworm base (bullseye mirrors 404); the s6 service files are created in the Dockerfile; `subscription_key` is a password field;
 `update_languages` defaults to off (the locales download returns 401 with a Speech key and falls back to the bundled list).
 
 Setup: enter the Azure Speech key, region (e.g. `centralindia`) and language (e.g. `en-IN`; several separated

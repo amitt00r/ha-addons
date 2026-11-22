@@ -6,7 +6,7 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends netcat-traditional curl \
+    && apt-get install -y --no-install-recommends netcat-traditional \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /
