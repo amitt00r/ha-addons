@@ -1,0 +1,28 @@
+name: Microsoft STT (fixed)
+version: "1.3.10.1"
+slug: microsoft_stt
+description: Microsoft Azure speech to text over Wyoming, with the stale-transcript bug fixed
+url: https://github.com/amitt00r/ha-addons/tree/main/microsoft_stt
+init: false
+arch:
+  - aarch64
+  - amd64
+discovery:
+  - wyoming
+ports:
+  10300/tcp: null
+ports_description:
+  10300/tcp: Wyoming (only needed outside Home Assistant)
+options:
+  language: en-IN
+  debug_logging: false
+  update_languages: false
+  profanity: masked
+schema:
+  subscription_key: password
+  service_region: str
+  language: str
+  debug_logging: bool
+  update_languages: bool
+  profanity: list(off|masked|removed)
+tmpfs: true
