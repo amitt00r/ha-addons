@@ -1,0 +1,48 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Hybrid Weather",
+        "description": "Current conditions from observation sensors while they are fresh, forecasts from a weather entity (which also covers current conditions when the observations are missing or stale).",
+        "data": {
+          "name": "Name",
+          "forecast_entity": "Forecast and fallback weather entity",
+          "condition_entity": "Observed condition sensor",
+          "observed_entity": "Observation time sensor",
+          "max_age": "Maximum observation age",
+          "temperature_entity": "Temperature sensor",
+          "humidity_entity": "Humidity sensor",
+          "dew_point_entity": "Dew point sensor",
+          "pressure_entity": "Pressure sensor",
+          "wind_speed_entity": "Wind speed sensor",
+          "wind_gust_entity": "Wind gust sensor",
+          "wind_bearing_entity": "Wind bearing sensor",
+          "cloud_coverage_entity": "Cloud coverage sensor",
+          "visibility_entity": "Visibility sensor"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Hybrid Weather",
+        "data": {
+          "forecast_entity": "Forecast and fallback weather entity",
+          "condition_entity": "Observed condition sensor",
+          "observed_entity": "Observation time sensor",
+          "max_age": "Maximum observation age",
+          "temperature_entity": "Temperature sensor",
+          "humidity_entity": "Humidity sensor",
+          "dew_point_entity": "Dew point sensor",
+          "pressure_entity": "Pressure sensor",
+          "wind_speed_entity": "Wind speed sensor",
+          "wind_gust_entity": "Wind gust sensor",
+          "wind_bearing_entity": "Wind bearing sensor",
+          "cloud_coverage_entity": "Cloud coverage sensor",
+          "visibility_entity": "Visibility sensor"
+        }
+      }
+    }
+  }
+}

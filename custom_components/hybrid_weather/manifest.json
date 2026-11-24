@@ -1,0 +1,12 @@
+{
+  "domain": "hybrid_weather",
+  "name": "Hybrid Weather",
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": ["weather"],
+  "documentation": "https://github.com/amitt00r/ha-addons/tree/main/custom_components/hybrid_weather",
+  "integration_type": "helper",
+  "iot_class": "calculated",
+  "requirements": [],
+  "version": "1.0.0"
+}
