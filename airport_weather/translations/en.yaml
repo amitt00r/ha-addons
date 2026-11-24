@@ -1,0 +1,10 @@
+configuration:
+  station:
+    name: Station
+    description: ICAO code of the airport (VOBG = Bengaluru HAL).
+  entity_prefix:
+    name: Entity prefix
+    description: Sensors are created as sensor.<prefix>_<field>.
+  poll_minutes:
+    name: Poll interval (minutes)
+    description: How often to fetch the METAR. Reports are issued every 30 minutes, plus specials.
