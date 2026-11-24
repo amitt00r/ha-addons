@@ -1,0 +1,22 @@
+name: Airport Weather
+version: "1.0.0"
+slug: airport_weather
+description: Observed current weather from an airport's METAR reports, as MQTT sensors
+url: https://github.com/amitt00r/ha-addons/tree/main/airport_weather
+arch:
+  - aarch64
+  - amd64
+init: true
+startup: application
+boot: auto
+hassio_api: true
+services:
+  - mqtt:need
+options:
+  station: VOBG
+  entity_prefix: outside_airport
+  poll_minutes: 5
+schema:
+  station: match(^[A-Z0-9]{4}$)
+  entity_prefix: match(^[a-z0-9_]+$)
+  poll_minutes: int(1,60)
